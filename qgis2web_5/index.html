@@ -20,11 +20,35 @@
             margin: 0;
         }
         </style>
+         <style>
+            .back-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                z-index: 9999; /* Pastikan tombol di atas elemen lainnya */
+            }
+            .back-button:hover {
+                background-color: #0056b3;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+                transform: translateY(-2px);
+            }
+        </style>
         <title></title>
     </head>
     <body>
         <div id="map">
         </div>
+        <!-- Tombol kembali ke halaman utama -->
+    <a href="../index.html" class="back-button">Kembali ke Halaman Utama</a>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
